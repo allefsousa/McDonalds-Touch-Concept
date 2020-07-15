@@ -27,7 +27,39 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
 
-    return null;
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Row(
+        children: <Widget>[
+          Expanded(
+              flex: 2,
+              child: SingleChildScrollView(
+                physics: BouncingScrollPhysics(),
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      color: Colors.white,
+                      child: SafeArea(
+                          child: Padding(padding: const EdgeInsets.only(left: 24.0,bottom: 16.0,top: 24.0,right: 16.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+
+                              ],
+                            ),
+                          ),
+                      ),
+                    )
+                  ],
+                ),
+              )
+          ),
+          Expanded(child: Container(
+            color: Colors.red[50],
+          ))
+        ],
+      ),
+    );
   }
 
 }
