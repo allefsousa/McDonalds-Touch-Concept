@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,7 +12,10 @@ class MyApp extends StatelessWidget {
       title: 'MC Donalds Touch Concept',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+          textTheme: GoogleFonts.varelaRoundTextTheme()
       ),
+      debugShowCheckedModeBanner: false,
       home: MyHomePage(),
     );
   }
@@ -44,6 +49,20 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
+                                SizedBox(
+                                  child: SvgPicture.asset(
+                                    'assets/images/logo.svg',
+                                    height: 48,
+                                  ),
+                                ),
+                                SizedBox(height: 64,),
+                                Text("Hey",style: TextStyle(
+                                  fontSize: 36.0,
+                                  fontWeight: FontWeight.w900
+                                ),),
+                                Text("what's up?",style: TextStyle(
+                                  fontSize: 36.0,
+                                ),),
 
                               ],
                             ),
