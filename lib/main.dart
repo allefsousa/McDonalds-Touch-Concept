@@ -36,8 +36,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle(
-          statusBarColor: Colors.redAccent,
-          systemNavigationBarColor: Colors.red,
+          statusBarColor: Colors.transparent,
+          systemNavigationBarColor: Colors.transparent,
           statusBarIconBrightness: Brightness.dark,
           systemNavigationBarIconBrightness: Brightness.dark),
       child: Scaffold(
