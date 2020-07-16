@@ -16,7 +16,7 @@ class PopularItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              height: 90,
+              height: 100,
               child: Column(
                 children: <Widget>[
                   SizedBox(
@@ -41,7 +41,13 @@ class PopularItem extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
+            Text("$price",textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w900,
+              color: Color(0xFFFFCB3F)
+            ),)
           ],
         ),
       ),

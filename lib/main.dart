@@ -1,7 +1,9 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mcdonalds/widgets/menu_option.dart';
+import 'package:mcdonalds/widgets/order_item.dart';
 import 'package:mcdonalds/widgets/popular_item.dart';
 
 void main() => runApp(MyApp());
@@ -218,9 +220,91 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               )),
           Expanded(
-              child: Container(
-            color: Colors.red[50],
-          ))
+              child: SafeArea(
+                  child: Padding(
+            padding: const EdgeInsets.only(
+                left: 16.0, bottom: 16.0, top: 24.0, right: 16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  "My",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
+                ),
+                Text(
+                  "Order",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
+                ),
+                SizedBox(
+                  height: 12.0,
+                ),
+                Text(
+                  "Take Out",
+                  style: TextStyle(
+                    fontSize: 12,
+                  ),
+                ),
+                SizedBox(
+                  height: 16.0,
+                ),
+                Divider(
+                  color: Colors.grey,
+                ),
+                Expanded(child: ListView(
+                  physics: BouncingScrollPhysics(),
+                  children: <Widget>[
+                    OrderItem(name: "Diet Coke", imageUrl: "assets/images/beverages.png", price: r"$ 1.49", quantity: 1),
+                    OrderItem(name: "Large Fries", imageUrl: "assets/images/snacks_and_sides.png", price: r"$ 3.98", quantity: 2),
+                    OrderItem(name: "Cheeseburguer", imageUrl: "assets/images/cheeseburger.png", price: r"$ 1.49", quantity: 1),
+                    OrderItem(name: "Nuggets X10", imageUrl: "assets/images/chicken.png", price: r"$ 1.49", quantity: 1),
+                  ],
+                )),
+                Divider(
+                  color: Colors.grey,
+                ),
+                SizedBox(
+                  height: 16.0,
+                ),
+                Center(
+                  child: Text(
+                    "Total",
+                    style: TextStyle(fontSize: 12, color: Colors.grey),
+                  ),
+                ),
+                Center(
+                  child: Text(
+                    r"$11.95",
+                    style: TextStyle(fontSize: 18, color: Colors.black,
+                      fontWeight: FontWeight.bold
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 24.0,
+                ),
+                Container(
+                  width: double.infinity,
+                  height: 80,
+                  decoration: BoxDecoration(
+                    color: Color(0xFFFFCB3F),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(30)
+                    )
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Done",
+                      style:TextStyle(
+                        fontSize: 14,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold
+                      )
+                    ),
+                  ),
+                )
+              ],
+            ),
+          )))
         ],
       ),
     );
