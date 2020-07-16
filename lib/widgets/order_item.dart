@@ -77,23 +77,29 @@ class OrderItem extends StatelessWidget {
                       fontSize: 12,
                       fontWeight: FontWeight.w900),
                 ),
-                SizedBox(width: 8,),
-                Container(
-                  width: 22,
-                  height: 16,
-                  decoration: BoxDecoration(
-                      color: Color(0xFFFFCB3F),
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
-                      border: Border.all(width: 0.5, color: Colors.grey)),
-                  child: Center(
-                    child: Icon(
-                      Icons.add,
-                      size: 10,
-                      color: Colors.black,
+                SizedBox(
+                  width: 8,
+                ),
+                InkWell(
+                  onTap: (){
+                    print("Teste");
+                  },
+                  child: Container(
+                    width: 22,
+                    height: 16,
+                    decoration: BoxDecoration(
+                        color: Color(0xFFFFCB3F),
+                        borderRadius: BorderRadius.all(Radius.circular(5)),
+                        border: Border.all(width: 0.5, color: Colors.grey)),
+                    child: Center(
+                      child: Icon(
+                        Icons.add,
+                        size: 10,
+                        color: Colors.black,
+                      ),
                     ),
                   ),
-                ),
-
+                )
               ],
             )
           ],
