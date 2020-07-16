@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mcdonalds/menu_option.dart';
+import 'package:mcdonalds/widgets/menu_option.dart';
+import 'package:mcdonalds/widgets/popular_item.dart';
 
 void main() => runApp(MyApp());
 
@@ -80,15 +81,19 @@ class _MyHomePageState extends State<MyHomePage> {
                                   Row(
                                     children: <Widget>[
                                       MenuOption(
-                                          title: "",
-                                          imageUrl: "",
-                                          discount: 20),                                      SizedBox(
+                                          title: "Combo Meal",
+                                          imageUrl:
+                                              "assets/images/combo_meal.png",
+                                          discount: 20),
+                                      SizedBox(
                                         width: 8,
                                       ),
                                       MenuOption(
-                                          title: "",
-                                          imageUrl: "",
-                                          discount: null),                                    ],
+                                          title: "Burgers & Sandwiches",
+                                          imageUrl:
+                                              "assets/images/burgers_and_sandwiches.png",
+                                          discount: null),
+                                    ],
                                   ),
                                   SizedBox(
                                     width: 8,
@@ -96,16 +101,19 @@ class _MyHomePageState extends State<MyHomePage> {
                                   Row(
                                     children: <Widget>[
                                       MenuOption(
-                                          title: "",
-                                          imageUrl: "",
+                                          title: "Happy Meal",
+                                          imageUrl:
+                                              "assets/images/happy_meal.png",
                                           discount: null),
                                       SizedBox(
                                         width: 8,
                                       ),
                                       MenuOption(
-                                          title: "",
-                                          imageUrl: "",
-                                          discount: null),                                    ],
+                                          title: "Beverages",
+                                          imageUrl:
+                                              "assets/images/beverages.png",
+                                          discount: null),
+                                    ],
                                   ),
                                   SizedBox(
                                     width: 8,
@@ -113,31 +121,88 @@ class _MyHomePageState extends State<MyHomePage> {
                                   Row(
                                     children: <Widget>[
                                       MenuOption(
-                                          title: "",
-                                          imageUrl: "",
-                                          discount: null),                                      SizedBox(
+                                          title: "Chicken",
+                                          imageUrl: "assets/images/chicken.png",
+                                          discount: null),
+                                      SizedBox(
                                         width: 8,
                                       ),
                                       MenuOption(
-                                          title: "",
-                                          imageUrl: "",
-                                          discount: null),                                    ],
+                                          title: "Snacks & Sides",
+                                          imageUrl:
+                                              "assets/images/snacks_and_sides.png",
+                                          discount: null),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 48.0,
+                              ),
+                              Text(
+                                "Popular",
+                                style: TextStyle(fontSize: 36),
+                              ),
+                              SizedBox(
+                                height: 32.0,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                children: <Widget>[
+                                  Row(
+                                    children: <Widget>[
+                                      PopularItem(
+                                          title: "Big Mac",
+                                          imageUrl: "assets/images/big_mac.png",
+                                          price: r"$ 3.79"),
+                                      SizedBox(
+                                        width: 8,
+                                      ),
+                                      PopularItem(
+                                          title: "Double Quarter Pounder",
+                                          imageUrl:
+                                              "assets/images/double_quarter_pounder.png",
+                                          price: r"$ 3.79"),
+                                      SizedBox(
+                                        width: 8,
+                                      ),
+                                      PopularItem(
+                                          title: "Bacon Ranch Salad",
+                                          imageUrl:
+                                              "assets/images/bacon_ranch_salad.png",
+                                          price: r"$ 3.79"),
+                                    ],
                                   ),
                                   SizedBox(
                                     width: 8,
                                   ),
                                   Row(
                                     children: <Widget>[
-                                      MenuOption(
-                                          title: "",
-                                          imageUrl: "",
-                                          discount: null),                                      SizedBox(
+                                      PopularItem(
+                                          title: "Quarter Pounder",
+                                          imageUrl:
+                                              "assets/images/quarter_pounder.png",
+                                          price: r"$ 3.79"),
+                                      SizedBox(
                                         width: 8,
                                       ),
-                                      MenuOption(
-                                          title: "",
-                                          imageUrl: "",
-                                          discount: null),                                    ],
+                                      PopularItem(
+                                          title: "Filet O Fish",
+                                          imageUrl:
+                                              "assets/images/filet_o_fish.png",
+                                          price: r"$ 3.79"),
+                                      SizedBox(
+                                        width: 8,
+                                      ),
+                                      PopularItem(
+                                          title: "Cheeseburguer",
+                                          imageUrl:
+                                              "assets/images/cheeseburger.png",
+                                          price: r"$ 3.79"),
+                                      SizedBox(
+                                        width: 8,
+                                      ),
+                                    ],
                                   ),
                                   SizedBox(
                                     width: 8,
