@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mcdonalds/menu_option.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,10 +12,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'MC Donalds Touch Concept',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-          textTheme: GoogleFonts.varelaRoundTextTheme()
-      ),
+          primarySwatch: Colors.blue,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          textTheme: GoogleFonts.varelaRoundTextTheme()),
       debugShowCheckedModeBanner: false,
       home: MyHomePage(),
     );
@@ -31,7 +31,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: Colors.white,
       body: Row(
@@ -45,40 +44,120 @@ class _MyHomePageState extends State<MyHomePage> {
                     Container(
                       color: Colors.white,
                       child: SafeArea(
-                          child: Padding(padding: const EdgeInsets.only(left: 24.0,bottom: 16.0,top: 24.0,right: 16.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                SizedBox(
-                                  child: SvgPicture.asset(
-                                    'assets/images/logo.svg',
-                                    height: 48,
-                                  ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              left: 24.0, bottom: 16.0, top: 24.0, right: 16.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              SizedBox(
+                                child: SvgPicture.asset(
+                                  'assets/images/logo.svg',
+                                  height: 48,
                                 ),
-                                SizedBox(height: 64,),
-                                Text("Hey",style: TextStyle(
+                              ),
+                              SizedBox(
+                                height: 64,
+                              ),
+                              Text(
+                                "Hey",
+                                style: TextStyle(
+                                    fontSize: 36.0,
+                                    fontWeight: FontWeight.w900),
+                              ),
+                              Text(
+                                "what's up?",
+                                style: TextStyle(
                                   fontSize: 36.0,
-                                  fontWeight: FontWeight.w900
-                                ),),
-                                Text("what's up?",style: TextStyle(
-                                  fontSize: 36.0,
-                                ),),
-
-                              ],
-                            ),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 32.0,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                children: <Widget>[
+                                  Row(
+                                    children: <Widget>[
+                                      MenuOption(
+                                          title: "",
+                                          imageUrl: "",
+                                          discount: 20),                                      SizedBox(
+                                        width: 8,
+                                      ),
+                                      MenuOption(
+                                          title: "",
+                                          imageUrl: "",
+                                          discount: null),                                    ],
+                                  ),
+                                  SizedBox(
+                                    width: 8,
+                                  ),
+                                  Row(
+                                    children: <Widget>[
+                                      MenuOption(
+                                          title: "",
+                                          imageUrl: "",
+                                          discount: null),
+                                      SizedBox(
+                                        width: 8,
+                                      ),
+                                      MenuOption(
+                                          title: "",
+                                          imageUrl: "",
+                                          discount: null),                                    ],
+                                  ),
+                                  SizedBox(
+                                    width: 8,
+                                  ),
+                                  Row(
+                                    children: <Widget>[
+                                      MenuOption(
+                                          title: "",
+                                          imageUrl: "",
+                                          discount: null),                                      SizedBox(
+                                        width: 8,
+                                      ),
+                                      MenuOption(
+                                          title: "",
+                                          imageUrl: "",
+                                          discount: null),                                    ],
+                                  ),
+                                  SizedBox(
+                                    width: 8,
+                                  ),
+                                  Row(
+                                    children: <Widget>[
+                                      MenuOption(
+                                          title: "",
+                                          imageUrl: "",
+                                          discount: null),                                      SizedBox(
+                                        width: 8,
+                                      ),
+                                      MenuOption(
+                                          title: "",
+                                          imageUrl: "",
+                                          discount: null),                                    ],
+                                  ),
+                                  SizedBox(
+                                    width: 8,
+                                  ),
+                                ],
+                              )
+                            ],
                           ),
+                        ),
                       ),
                     )
                   ],
                 ),
-              )
-          ),
-          Expanded(child: Container(
+              )),
+          Expanded(
+              child: Container(
             color: Colors.red[50],
           ))
         ],
       ),
     );
   }
-
 }
